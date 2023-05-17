@@ -9,7 +9,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   
-  var length = lengthChoice();
+ 
   
 
   passwordText.value = password;
@@ -21,14 +21,15 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-//var upperCharactersList = ABCDEFGHIJKLMNOPQRSTUVWXYZ;
-//var lowerCharactersList = abcdefghijklmnopqrstuvwxyz;
-//var numbersList = 1234567890;
-//const specialCharactersList = [U+0020, U+0021, U+0022, U+0024, U+0025, U+0026, U+0027, U+0028, U+0029, U+003F];
+var upperCharactersList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lowerCharactersList = "abcdefghijklmnopqrstuvwxyz";
+var numbersList = "1234567890";
+const specialCharactersList = "!@#$%^&*";
 
 
+function generatePassword (){
 var lengthChoice = prompt("Choose a password length between 8 and 128 characters.");
-
+var allCharacters = "";
 if (lengthChoice > 7 && lengthChoice < 129) {
     window.alert("Your password will be " + lengthChoice + " characters long.");
 } else {
@@ -38,6 +39,7 @@ if (lengthChoice > 7 && lengthChoice < 129) {
 var lowerChars = confirm("Would you like to include lowercase characters?");
 
 if (lowerChars === true) {
+  allCharacters += lowerCharactersList;
   alert("Your password will contain lowercase characters.");
 } else {
   alert("Your password will NOT contain lowercase characters.");
@@ -46,6 +48,7 @@ if (lowerChars === true) {
 var upperChars = confirm("Would you like to include Uppercase characters?");
 
 if (upperChars === true) {
+  allCharacters += upperCharactersList;
   alert("Your password will contain uppercase characters.");
 } else {
   alert("Your password will NOT contain uppercase characters.");
@@ -55,6 +58,7 @@ if (upperChars === true) {
 var numChars = confirm("Would you like to include numbers?");
 
 if (numChars === true) {
+  allCharacters += numbersList;
   alert("Your password will contain numbers.");
 } else {
   alert("Your password will NOT contain numbers.");
@@ -63,17 +67,20 @@ if (numChars === true) {
 var specialChars = confirm("Would you like to include special characters?");
 
 if (specialChars === true) {
+  allCharacters += specialCharactersList;
   alert("Your password will contain special characters.");
 } else {
   alert("Your password will NOT contain special characters.");
 }
 
-function generatePassword() {
-  var length = lengthChoice; 
-  
+var finalPassword = "";
+for (let i = 0; i < lengthChoice; i++) {
+ var randomNumber = Math.floor(Math.random()* allCharacters.length);
+ var randomCharacter = allCharacters [randomNumber]; 
+finalPassword += randomCharacter
 }
-
-
+return finalPassword;
+}
 
 /* GIVEN I need a new, secure password
 WHEN I click the button to generate a password
