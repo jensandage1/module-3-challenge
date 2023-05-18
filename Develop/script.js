@@ -24,7 +24,7 @@ generateBtn.addEventListener("click", writePassword);
 var upperCharactersList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCharactersList = "abcdefghijklmnopqrstuvwxyz";
 var numbersList = "1234567890";
-const specialCharactersList = "!@#$%^&*";
+const specialCharactersList = "!@#$%^&*"; //I decided to limit the characters that could be used. 
 
 
 function generatePassword (){
@@ -33,10 +33,10 @@ var allCharacters = "";
 if (lengthChoice > 7 && lengthChoice < 129) {
     window.alert("Your password will be " + lengthChoice + " characters long.");
 } else {
-  prompt("That number is invalid. Please try again."); //works
+  prompt("That number is invalid. Please try again."); 
 }
 
-var lowerChars = confirm("Would you like to include lowercase characters?");
+var lowerChars = confirm("Would you like to include lowercase characters?"); //confirm is best choice for yes or no. ok is yes, cancel is no. 
 
 if (lowerChars === true) {
   allCharacters += lowerCharactersList;
@@ -75,7 +75,7 @@ if (specialChars === true) {
 
 var finalPassword = "";
 for (let i = 0; i < lengthChoice; i++) {
- var randomNumber = Math.floor(Math.random()* allCharacters.length);
+ var randomNumber = Math.floor(Math.random()* allCharacters.length); //randomizes the password. 
  var randomCharacter = allCharacters [randomNumber]; 
 finalPassword += randomCharacter
 }
