@@ -8,9 +8,6 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  
- 
-  
 
   passwordText.value = password;
 
@@ -31,10 +28,13 @@ function generatePassword (){
 var lengthChoice = prompt("Choose a password length between 8 and 128 characters.");
 var allCharacters = "";
 if (lengthChoice > 7 && lengthChoice < 129) {
-    window.alert("Your password will be " + lengthChoice + " characters long.");
+    alert("Your password will be " + lengthChoice + " characters long.");
 } else {
-  prompt("That number is invalid. Please try again."); 
+  alert("That number is invalid. Please try again.");
+  return;
 }
+
+
 
 var lowerChars = confirm("Would you like to include lowercase characters?"); //confirm is best choice for yes or no. ok is yes, cancel is no. 
 
