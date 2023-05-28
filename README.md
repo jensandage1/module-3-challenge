@@ -5,10 +5,10 @@ password generator
 
 This is a random password generator based on the consumer input. 
 
-C:\Users\jensa\bootcamp\module-3-challenge\Develop\2023-05-17.png
-C:\Users\jensa\bootcamp\module-3-challenge\Develop\2023-05-17 (1).png
+screenshot-1.png
+screenshot-2.png
 
-
+Your site is live at https://jensandage1.github.io/module-3-challenge-password-generator/
 
 ## Installation
 

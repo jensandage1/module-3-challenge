@@ -31,7 +31,7 @@ if (lengthChoice > 7 && lengthChoice < 129) {
     alert("Your password will be " + lengthChoice + " characters long.");
 } else {
   alert("That number is invalid. Please try again.");
-  return;
+  return null;
 }
 
 
