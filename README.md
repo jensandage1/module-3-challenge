@@ -5,8 +5,9 @@ password generator
 
 This is a random password generator based on the consumer input. 
 
-screenshot-1.png
-screenshot-2.png
+Screenshots of live application:
+![screenshot 1 of 2 of password generator](screenshot-1.png)
+![screenshot 2 0f 2 of password generator](screenshot-2.png)
 
 Your site is live at https://jensandage1.github.io/module-3-challenge-password-generator/
 
